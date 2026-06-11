@@ -13,7 +13,7 @@ class Kiac < Formula
 
   if Hardware::CPU.arm?
     url "https://github.com/saiyam1814/kiac/releases/download/v0.1.0/kiac_0.1.0_darwin_arm64.tar.gz"
-    sha256 "9228d761058090b78b6802748025c58d0fd4e7cf3f48626150810aca93e38de6"
+    sha256 "d3fd63d679c29c30520522bb2d0115df8f88ea46ac7eba41f652c7592f73b9e8"
 
     def install
       bin.install "kiac"
