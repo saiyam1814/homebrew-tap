@@ -5,15 +5,15 @@
 class Kiac < Formula
   desc "Kubernetes in Apple Containers - every node is its own lightweight VM"
   homepage "https://github.com/saiyam1814/kiac"
-  version "0.3.2"
+  version "0.3.3"
   license "MIT"
 
   depends_on "kubernetes-cli"
   depends_on :macos
 
   if Hardware::CPU.arm?
-    url "https://github.com/saiyam1814/kiac/releases/download/v0.3.2/kiac_0.3.2_darwin_arm64.tar.gz"
-    sha256 "5643878d27c6325885bbfe820f858f687e898e0334b083d2747f8d75b6ee60d5"
+    url "https://github.com/saiyam1814/kiac/releases/download/v0.3.3/kiac_0.3.3_darwin_arm64.tar.gz"
+    sha256 "4e29f59fe30fbfee6d6d47b12572d66f44d0da7c04e6f6b5990eaebdf8fdc2c8"
 
     def install
       bin.install "kiac"
