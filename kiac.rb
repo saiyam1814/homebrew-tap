@@ -5,15 +5,15 @@
 class Kiac < Formula
   desc "Kubernetes in Apple Containers - every node is its own lightweight VM"
   homepage "https://github.com/saiyam1814/kiac"
-  version "0.4.0"
+  version "0.4.1"
   license "MIT"
 
   depends_on "kubernetes-cli"
   depends_on :macos
 
   if Hardware::CPU.arm?
-    url "https://github.com/saiyam1814/kiac/releases/download/v0.4.0/kiac_0.4.0_darwin_arm64.tar.gz"
-    sha256 "208d24b0a97463cabd2dc6cbc9c4cb2d0a12c664c35e148a8a79d14e334ce0f0"
+    url "https://github.com/saiyam1814/kiac/releases/download/v0.4.1/kiac_0.4.1_darwin_arm64.tar.gz"
+    sha256 "e7bdeec43a1849798ef61a55e6921dec424e4f4302b068a1d8ade5cf0a7702ff"
 
     def install
       bin.install "kiac"
@@ -22,7 +22,7 @@ class Kiac < Formula
 
   def caveats
     <<~EOS
-      kiac needs apple/container 1.0+:
+      kiac needs apple/container 1.0+ (skip 1.2.0; use 1.2.1 or newer):
         https://github.com/apple/container/releases
       Then: kiac doctor
     EOS
