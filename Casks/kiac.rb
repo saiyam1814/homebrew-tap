@@ -5,8 +5,7 @@ cask "kiac" do
   on_macos do
     on_arm do
       sha256 "55052bdfc5c8e5ad86757979d4f983622b64620002af6e89bdd1810ea9c25e8c"
-      url "https://github.com/saiyam1814/kiac/releases/download/v#{version}/kiac_#{version}_darwin_arm64.tar.gz",
-        verified: "github.com/saiyam1814/kiac/"
+      url "https://github.com/saiyam1814/kiac/releases/download/v#{version}/kiac_#{version}_darwin_arm64.tar.gz"
     end
   end
 
@@ -23,9 +22,9 @@ cask "kiac" do
 
   binary "kiac"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/kiac"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/kiac"]
     end
   end
 
