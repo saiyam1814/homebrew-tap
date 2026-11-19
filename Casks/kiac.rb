@@ -6,11 +6,11 @@ cask "kiac" do
     end
   end
 
-  version "0.12.0"
+  version "0.13.0"
 
   on_macos do
     on_arm do
-      sha256 "dfe9836154d55295a92927f6631bb3133a9def1ea0799a792b278e5b8d8e44db"
+      sha256 "9e79cfb31156fe4b72e644b5bd71f0d8e6ddc690e843cd576aab6441058176d2"
       url "https://github.com/saiyam1814/kiac/releases/download/v#{version}/kiac_#{version}_darwin_arm64.tar.gz"
     end
   end
